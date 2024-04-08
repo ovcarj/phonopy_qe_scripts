@@ -5,7 +5,7 @@ Some useful scripts for preparing, running and postprocessing Phonopy calculatio
 
 **Usage:**
 
-First create a `header.in` file from `pwscf.in`. Then:
+First create a ``header.in`` file from ``pwscf.in``. Then:
 
 .. code:: shell
 
