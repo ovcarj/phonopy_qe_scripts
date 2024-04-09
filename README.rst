@@ -68,10 +68,18 @@ To create the ``ATOMIC COORDINATES`` and ``CELL PARAMETERS`` cards for ``pw.x`` 
 
 The results will be stored in ``structure_pw.dat``.
 
-The previous two scripts are used to create all inputs for an electronic band structure and PDOS calculations at:
+The previous two scripts are used to create all inputs for an electronic band structure and PDOS calculations at once:
 
 .. code:: shell
 
-    python create_qe_inputs.sh <structure_filename>
+    bash create_qe_inputs.sh <structure_filename>
 
 which requires a ``header_pw.in`` file.
+
+``create_qe_inputs.sh`` can be run in batch (for multiple structures) using:
+
+.. code:: shell
+
+    bash create_batch_qe_inputs.sh
+
+The structure filenames are searched for using the ``structure_names`` variable defined in ``create_batch_qe_inputs.sh``. Inputs for the calculations are created in ``batch_$structure_filename`` directories.
