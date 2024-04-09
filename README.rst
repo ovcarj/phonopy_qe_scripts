@@ -5,6 +5,8 @@ Some useful scripts for preparing, running and postprocessing Phonopy calculatio
 
 **Get FORCE_SETS**
 
+Inputs for this part are given in ``get_FORCE_SETS``.
+
 First create a ``header.in`` file from ``pwscf.in``. Then:
 
 .. code:: shell
@@ -20,6 +22,8 @@ First create a ``header.in`` file from ``pwscf.in``. Then:
   bash fs_command.sh
 
 **Create modulations along eigenvectors**
+
+Inputs for this part are given in ``modulations``.
 
 Eigenvectors at ``q = (0, 0, 0)`` may be printed to ``qpoints.yaml`` using 
 
@@ -52,6 +56,8 @@ The average displacement in ``MPOSCAR-*`` files may be checked by (requires ASE)
     python check_displacements.py
 
 **Band structures and other calculations**
+
+Inputs for this part are given in ``bands_etc``.
 
 To create a k-point path for ``pw.x`` using SeeK-path from an ASE readable structure, use
 
