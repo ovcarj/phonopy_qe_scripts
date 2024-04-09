@@ -44,3 +44,9 @@ The unit cell vectors in the resulting ``MPOSCAR-*`` files have incorrect units 
 .. code:: shell
 
     python fix_MPOSCAR.py
+
+The average displacement in ``MPOSCAR-*`` files may be checked by:
+
+.. code:: shell
+
+    python check_displacements.py
