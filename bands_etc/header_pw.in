@@ -1,0 +1,37 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.1400000000d-03
+  forc_conv_thr =   1.0000000000d-04
+  outdir = './out/'
+  prefix = 'sample_pwscf_file'
+  pseudo_dir = '/path/to/pseudo/dir/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  nstep = 999
+/
+&SYSTEM
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   6.0000000000d+01
+  ibrav = 0
+  nat = 115
+  nosym = .false.
+  ntyp = 5
+  occupations = 'smearing'
+  smearing = 'gaussian'
+  degauss = 0.001
+  input_dft = 'vdw-df-cx'
+/
+&ELECTRONS
+  conv_thr =   2.2800000000d-08
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+ Hg  200.59000   Hg_ONCV_PBE-1.0.oncvpsp.upf
+ Br   79.90400   br_pbe_v1.4.uspp.F.UPF
+  S   32.06500   s_pbe_v1.4.uspp.F.UPF
+  C   12.01070   C.pbe-n-kjpaw_psl.1.0.0.UPF
+  H    1.00794   H.pbe-rrkjus_psl.1.0.0.UPF
+K_POINTS automatic
+2 2 1 0 0 0

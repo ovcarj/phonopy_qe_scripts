@@ -51,12 +51,27 @@ The average displacement in ``MPOSCAR-*`` files may be checked by (requires ASE)
 
     python check_displacements.py
 
-**Bands and other calculations**
+**Band structures and other calculations**
 
 To create a k-point path for ``pw.x`` using SeeK-path from an ASE readable structure, use
 
 .. code:: shell
 
-    python get_pw_kpath.py
+    python get_pw_kpath.py <structure_filename>
 
 The results will be stored in ``kpoints.dat``, ``path.pkl`` and ``explicit_labels.pkl``.
+To create the ``ATOMIC COORDINATES`` and ``CELL PARAMETERS`` cards for ``pw.x`` from an ASE readable structure, use
+
+.. code:: shell
+
+    python get_pw_structure.py <structure_filename>
+
+The results will be stored in ``structure_pw.dat``.
+
+The previous two scripts are used to create all inputs for an electronic band structure and PDOS calculations at:
+
+.. code:: shell
+
+    python create_qe_inputs.sh <structure_filename>
+
+which requires a ``header_pw.in`` file.
