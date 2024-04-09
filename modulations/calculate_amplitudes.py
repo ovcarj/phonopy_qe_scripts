@@ -48,6 +48,8 @@ with open('qpoints.yaml', 'r') as f:
                 eigenvectors[j][n] = eigenvector
 
 
+modulation_string = 'MODULATION = 1 1 1, '
+
 for i, band_index in enumerate(band_indices):
 
     print(f'Band #{band_index}')
@@ -60,3 +62,8 @@ for i, band_index in enumerate(band_indices):
     print(f'Amplitude = {amplitude}')
     print('---------------')
 
+    modulation_string += f'0 0 0 {band_index} {amplitude}, 0 0 0 {band_index} {-amplitude}, '
+
+print("Possible MODULATION tag:")
+
+print(f'{modulation_string[:-2]}')
