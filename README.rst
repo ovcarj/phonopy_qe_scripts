@@ -83,3 +83,11 @@ which requires a ``header_pw.in`` file.
     bash create_batch_qe_inputs.sh
 
 The structure filenames are searched for using the ``structure_names`` variable defined in ``create_batch_qe_inputs.sh``. Inputs for the calculations are created in ``batch_$structure_filename`` directories.
+
+A batch of calculations may be run using:
+
+.. code:: shell
+
+    bash batch_sub.sh <submission script filename>
+
+``batch_sub.sh`` will enter each subdirectory of current directory named ``batch_*`` and run ``sbatch <submission script filename``.
