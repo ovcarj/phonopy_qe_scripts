@@ -131,7 +131,6 @@ dmypy.json
 
 # Phonopy related files
 *.yaml
-*.conf
 disp-*
 supercell*
 
