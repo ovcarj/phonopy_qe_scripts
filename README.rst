@@ -94,6 +94,6 @@ A batch of calculations may be run using:
 
 .. code:: shell
 
-    bash batch_sub.sh <submission script filename>
+    bash batch_sub.sh <submission_script_filename>
 
-``batch_sub.sh`` will enter each subdirectory of current directory named ``batch_*`` and run ``sbatch <submission script filename``.
+``batch_sub.sh`` will enter each subdirectory of current directory named ``batch_*`` and run ``sbatch <submission_script_filename``.

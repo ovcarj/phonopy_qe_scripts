@@ -19,6 +19,8 @@ cp header_pw.in pwbands.in
 sed -i s/'scf'/'bands'/ pwbands.in
 sed -i -n '/K_POINTS/q;p' pwbands.in
 
+cat structure_pw.dat >> pwbands.in
+
 python get_pw_kpath.py $structure_filename
 
 cat kpath.dat >> pwbands.in
