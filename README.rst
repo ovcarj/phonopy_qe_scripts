@@ -45,8 +45,18 @@ The unit cell vectors in the resulting ``MPOSCAR-*`` files have incorrect units 
 
     python fix_MPOSCAR.py
 
-The average displacement in ``MPOSCAR-*`` files may be checked by:
+The average displacement in ``MPOSCAR-*`` files may be checked by (requires ASE):
 
 .. code:: shell
 
     python check_displacements.py
+
+**Bands and other calculations**
+
+To create a k-point path for ``pw.x`` using SeeK-path from an ASE readable structure, use
+
+.. code:: shell
+
+    python get_pw_kpath.py
+
+The results will be stored in ``kpoints.dat``, ``path.pkl`` and ``explicit_labels.pkl``.
