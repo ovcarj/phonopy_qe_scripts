@@ -31,7 +31,7 @@ echo "Creating a pp_bands.in input for $structure_filename..."
 
 prefix=$(grep "prefix" header_pw.in | cut -d "'" -f 2)
 
-cat <<EOT >> pp_bands.in
+cat <<EOT > pp_bands.in
 &bands
    prefix  = 'out/$prefix',
    lsym = .FALSE.,
@@ -43,7 +43,7 @@ echo "pp_bands.in created!"
 
 echo "Creating a projwfc.in input for $structure_filename..."
 
-cat <<EOT >> pp_bands.in
+cat <<EOT > projwfc.in
 &PROJWFC
     prefix= $prefix,
     outdir= './out'
