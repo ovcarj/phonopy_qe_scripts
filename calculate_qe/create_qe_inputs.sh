@@ -53,5 +53,5 @@ EOT
 
 echo "projwfc.in created!"
 
-echo "Done creating inputs for $structure_filename!"
+echo "Finished creating inputs for $structure_filename!"
 echo "--------"

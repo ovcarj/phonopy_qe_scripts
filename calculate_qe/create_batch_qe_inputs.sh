@@ -11,7 +11,7 @@ do
         
         mkdir -p $dirname
 
-        cp $structure_filename create_qe_inputs.sh get_pw_kpath.py get_pw_structure.py header_pw.in sub* $dirname
+        cp $structure_filename create_qe_inputs.sh get_pw_kpath.py get_pw_structure.py header_pw.in sub* plot_bands.py $dirname
 
         cd $dirname
         bash create_qe_inputs.sh $structure_filename

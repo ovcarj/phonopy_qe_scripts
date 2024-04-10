@@ -150,7 +150,7 @@ def plot_bands(fig, ax, ef, k, bands, piecewise, k_pieces, pieces_indices, high_
 
         band -= ef
 
-        if len(colors) > 1:
+        if isinstance(colors, list):
             c = colors[i % 3]
 
         else:

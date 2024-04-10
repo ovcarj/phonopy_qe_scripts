@@ -28,9 +28,14 @@ for i, modulated_file in enumerate(modulated_files):
             displacements[j] = distance
 
     average = np.average(displacements)
+    maximum = np.max(displacements)
 
     print(f'Average displacement in {modulated_file} is')
     print(f'{average} Angstrom')
     print(f'{average / Bohr} Bohr')
+
+    print(f'Maximum displacement in {modulated_file} is')
+    print(f'{maximum} Angstrom')
+
     print('------------')
 
