@@ -100,7 +100,7 @@ A batch of calculations may be run using:
 
 **Postprocess QE calculations**
 
-Inputs for this part are given in ``postprocess_qe``.
+Inputs for this part are given in ``postprocess_qe`` and ``calculate_qe``.
 
 To plot a band structure, use:
 
@@ -117,3 +117,15 @@ A batch of Python calculations may be run using:
     bash batch_python.sh <python_script_filename>
 
 ``batch_python.sh`` will enter each subdirectory of current directory named ``batch_*`` and run ``python <python_script_filename>``.
+
+The projected density of states (PDOS) for each of the atomic species defined in the ``ATOMIC_SPECIES`` card in ``pwscf.in`` may be calculated using:
+
+.. code:: shell
+
+    source sumpdos.sh
+
+which may also be run in batch using
+
+.. code:: shell
+
+    source batch_bash.sh <bash_script_filename>
