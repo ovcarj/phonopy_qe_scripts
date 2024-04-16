@@ -55,6 +55,8 @@ The average displacement in ``MPOSCAR-*`` files may be checked by (requires ASE)
 
     python check_displacements.py
 
+The same calculation of the modulation amplitudes as described above may be also performed disregarding hydrogen atoms by using ``calculate_amplitudes_noH.py`` and ``check_displacements_noH.py``.
+
 **Create QE calculations**
 
 Inputs for this part are given in ``calculate_qe``.
