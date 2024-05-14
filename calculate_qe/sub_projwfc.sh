@@ -17,4 +17,3 @@ export I_MPI_FABRICS=shm:ofi
 ulimit -s unlimited
 
 mpiexec.hydra -bootstrap slurm projwfc.x -nk 2 -i projwfc.in > projwfc.out
-

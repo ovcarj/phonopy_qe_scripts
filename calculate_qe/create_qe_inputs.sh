@@ -44,7 +44,7 @@ echo "pp_bands.in created!"
 echo "Creating a projwfc.in input for $structure_filename..."
 
 cat <<EOT > projwfc.in
-&projwfc
+&PROJWFC
     prefix= $prefix,
     outdir= './out'
     filpdos= 'pdos.dat'
@@ -53,6 +53,8 @@ EOT
 
 echo "projwfc.in created!"
 
+echo "Creating a pp_charge.in input for $structure_filename..."
+
 cat <<EOT > pp_charge.in
 &inputpp
     prefix = 'out/$prefix'
@@ -60,6 +62,7 @@ cat <<EOT > pp_charge.in
     filplot = 'gs.charge'
     plot_num= 0
 /
+
 &plot
     iflag = 3
     output_format = 6

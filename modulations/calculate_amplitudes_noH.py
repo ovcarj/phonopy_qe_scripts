@@ -41,6 +41,9 @@ with open('phonopy.yaml', 'r') as f:
 eigenvectors = np.empty((len(band_indices), n_atoms, 3))
 eigenvectors_noH = np.empty((len(band_indices), n_atoms - n_H, 3))
 
+print(n_atoms)
+print(n_H)
+
 with open('qpoints.yaml', 'r') as f:
 
     lines = f.readlines()
@@ -52,6 +55,8 @@ with open('qpoints.yaml', 'r') as f:
             j = [k for k, band_index in enumerate(band_indices) if f'- # {band_index}' in line][0]
 
             eigenvector_lines = lines[i + 1 : i + 1 + 4 * n_atoms + 2]
+
+            no_H_counter = 0
 
             for n in range(n_atoms):
 
@@ -66,7 +71,8 @@ with open('qpoints.yaml', 'r') as f:
 
                 if atom_number not in H_numbers:
 
-                    eigenvectors_noH[j][n] = eigenvector
+                    eigenvectors_noH[j][no_H_counter] = eigenvector
+                    no_H_counter += 1
 
 modulation_string = 'MODULATION = 1 1 1, '
 
